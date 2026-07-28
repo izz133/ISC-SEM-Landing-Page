@@ -69,7 +69,6 @@ nav {
   transform: translateX(-50%);
   z-index: 1000;
   backdrop-filter: blur(5px);
-  satu
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
