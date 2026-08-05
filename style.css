@@ -44,6 +44,7 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
+  color: #00234a;
 }
 
 a,
@@ -54,6 +55,25 @@ a:visited {
 
 p {
   text-align: justify;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #00234a;
+  margin-bottom: 2rem;
+
+  animation: fade-in linear both;
+  animation-timeline: view(30% 0%);
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #00234a;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin: 5rem auto;
 }
 
 nav {
@@ -70,6 +90,7 @@ nav {
   z-index: 1000;
   backdrop-filter: blur(5px);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, .3);
 }
 
 nav ul {
@@ -78,6 +99,17 @@ nav ul {
   align-items: center;
   height: 100%;
   padding: 0 4rem;
+}
+
+nav ul li {
+  color: #00234a;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+nav ul li:hover {
+  color: #6dd1d4;
+
 }
 
 nav ul li img {
@@ -95,6 +127,9 @@ nav ul li img {
   background-position: center, bottom -220px left;
   position: sticky;
   top: 0;
+  border-radius: 40px;
+  border: 10px solid #eee;
+  margin: 0;
 
   animation: hero linear;
   animation-timeline: scroll();
@@ -120,7 +155,7 @@ nav ul li img {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #fff;
   width: 37.5rem;
   /* 600px */
@@ -150,7 +185,7 @@ nav ul li img {
     opacity: 0;
   }
 
-  15% {
+  20% {
     transform: translateY(-100px);
     opacity: 0;
   }
@@ -163,6 +198,7 @@ nav ul li img {
   padding: 1rem 0 0 3vw;
   opacity: 1;
   transform: translateY(0);
+
 
   animation: hero-text2 linear both;
   animation-timeline: scroll();
@@ -182,8 +218,51 @@ nav ul li img {
 
   20% {
     transform: translateY(-200px);
-    opacity: 0;
+    opacity: 1;
   }
+}
+
+.hero-cta {
+  margin-left: 2rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 700;
+  margin: 1rem 0 0;
+
+  border: 1px solid rgba(109, 209, 212, .5);
+
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(109, 209, 212, .3);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: rgba(109, 209, 212, 1);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  transform: translateX(-2px);
+  color: #00234a;
+}
+
+.glass {
+  border-radius: 20px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, .5);
+
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, .3);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.float {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .services-thumbnail {
@@ -232,18 +311,203 @@ nav ul li img {
   border-radius: 20px;
 }
 
-.about-us {
-  display: flex;
-  gap: 0 5rem;
+.main-services {
   width: 62.5rem;
-  height: auto;
-  margin: 6rem auto 3rem;
-
-  animation: about-us linear both;
-  animation-timeline: view(50% 20%);
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@keyframes about-us {
+.main-service-item {
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+
+  animation: float-up linear both;
+  animation-timeline: view(30% 0%);
+}
+
+.main-services .main-service-item:nth-child(2) {
+  background: linear-gradient(rgba(0, 35, 74, 0.7), rgba(109, 209, 212, 0.5)), url("images/layup2_1000x563.jpg") center;
+  background-size: cover;
+  display: flex;
+}
+
+.main-services .main-service-item:nth-child(3) {
+  width: calc(50% - 0.5rem);
+  background: linear-gradient(rgba(109, 209, 212, 0.5), rgba(0, 35, 74, 0.7)), url("images/anchorage_1000x563.webp");
+  background-size: cover;
+
+  animation: float-up linear both;
+  animation-timeline: view(70% 0%);
+}
+
+.main-services .main-service-item:nth-child(4) {
+  width: calc(50% - 0.5rem);
+  background: linear-gradient(rgba(109, 209, 212, 0.5), rgba(0, 35, 74, 0.7)), url("images/ship-chandling_1000x667.webp");
+  background-size: cover;
+  margin-left: auto;
+
+  animation: float-up linear both;
+  animation-timeline: view(0% 0%);
+}
+
+
+.main-service-item .desc {
+  width: 40%;
+  color: #fff;
+}
+
+.main-service-item h3,
+.main-service-item p {
+  color: #fff;
+}
+
+.main-service-item h4 {
+  color: #00234a;
+}
+
+.main-service-item .container {
+  width: 60%;
+  display: flex;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+
+.main-service-item .container .item {
+  width: 33%;
+}
+
+.main-service-item .container .item ul li {
+  font-size: .8rem;
+  border-bottom: solid 1px #00234a;
+  padding: .7rem 0;
+}
+
+.main-service-item .container .item ul li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.chips {
+  margin-bottom: 1rem;
+}
+
+.chips p.glass {
+  padding: .5rem 1rem;
+  display: inline-block;
+  font-size: .8rem;
+  margin: .2rem 0;
+  color: #00234a;
+}
+
+.about-us {
+  background: linear-gradient(180deg, rgba(0, 35, 74, .5)), url("images/wavy-pattern.png"), rgba(0, 35, 74, 1);
+  background-size: cover;
+  background-attachment: fixed;
+
+  padding: 3rem 0;
+  border-radius: 40px;
+  border: 10px solid #eee;
+}
+
+.about-us .container {
+  width: 62.5rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-us .container h2 {
+  color: #fff;
+  width: 30%;
+  margin-bottom: 0;
+}
+
+.about-us .container .stats {
+  display: flex;
+  width: 70%;
+  gap: 1rem;
+}
+
+.about-us .container .stats p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+  width: 30%;
+}
+
+.about-us .container .stats p span {
+  display: block;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.about-us .container .stats p {
+  animation: float-up linear both;
+  animation-timeline: view(50% calc(10% + var(--i, 0) * 10%));
+}
+
+.about-us .container .stats p:nth-child(2) { --i: 1; }
+.about-us .container .stats p:nth-child(3) { --i: 2; }
+.about-us .container .stats p:nth-child(4) { --i: 3; }
+
+.process {
+  width: 62.5rem;
+}
+
+.process .container {
+  width: 62.5rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
+  border-radius: 30px;
+  border: solid 1px #6dd1d4;
+  background: url("images/grid-0.webp");
+  background-size: contain;
+  background-position: center;
+
+  animation: put-down linear both;
+  animation-timeline: view(30% 0%);
+}
+
+.process h2 {
+  text-align: center;
+}
+
+.process .container .item {
+  width: 30%;
+  position: relative;
+}
+
+.process .container .item h3 {
+  font-size: 1rem;
+}
+
+@keyframes put-down {
+  from {
+    opacity: 0;
+    transform: scale(1.15);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes float-up {
   from {
     opacity: 0;
     transform: translateY(50px);
@@ -260,35 +524,68 @@ nav ul li img {
   }
 }
 
-.about-us .half {
-  width: 50%;
+.location {
+  border-radius: 40px;
+  border: 10px solid #eee;
+  padding: 3rem;
+  background: url("images/brunei-bay_1500x755.png");
+  background-size: cover;
 }
 
-.about-us h2 {
-  font-size: 2rem;
+.location h2,
+.location p {
+  color: #fff;
+}
+
+.location h2 {
   margin-bottom: 1rem;
-  color: #00234a;
 }
 
-.about-us .stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem 2rem;
-  margin-top: 3.8rem;
+.location .container:first-child > p {
+  width: 30rem;
+
+  animation: fade-in linear both;
+  animation-timeline: view(30% 0%);
 }
 
-.about-us .stats p {
-  flex: 0 0 calc(50% - 2rem);
-  color: #00234a;
-  font-weight: 700;
-  font-size: 1.5rem;
-  text-align: left;
-}
-
-.about-us .stats p span {
-  display: block;
-  font-weight: 400;
+.location h2>span {
   font-size: 1rem;
+  font-weight: 300;
+  display: block;
+}
+
+.location .container {
+  width: 62.5rem;
+  margin: 0 auto;
+}
+
+.location .container:last-child {
+  margin: 10rem auto 0;
+  display: flex;
+  gap: 2rem;
+  background-color: rgba(255, 255, 255, .4);
+  backdrop-filter: blur(5px);
+
+  animation: float-up linear both;
+  animation-timeline: view(40% 0%);
+}
+
+.location .container:last-child > p {
+  font-size: 0.8rem;
+  width: 20%;
+  text-align: left;
+  color: #00234a;
+}
+
+.location .container:last-child > p span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+} 
+
+.location .container:last-child img {
+  width: 50px;
 }
 
 .usp-pin {
@@ -647,9 +944,7 @@ nav ul li img {
 }
 
 .benefits {
-  margin: 6rem auto 3rem;
   width: 100%;
-  height: 100vh;
 }
 
 .benefits h2 {
@@ -662,6 +957,12 @@ nav ul li img {
   animation-timeline: view(30% 0%);
 }
 
+.benefits h2 span {
+  display: block;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -672,7 +973,7 @@ nav ul li img {
   }
 }
 
-.benefits-container {
+.benefits .container {
   width: 62.5rem;
   margin: 0 auto;
   display: flex;
@@ -680,33 +981,41 @@ nav ul li img {
   gap: 2rem;
 }
 
-.benefits-container .half {
+.benefits .container .half {
   width: calc(50% - 1rem);
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
 }
 
-.benefits-container .benefit-item {
-  width: 100%;
+.benefits .container .item {
+  width: 50%;
   padding: 1rem 1rem 1rem 0;
 
   animation: fade-in linear both;
   animation-timeline: view(60% 20%);
 }
 
-.benefits-container .benefit-item:first-child {
-  margin-top: 1.5rem;
+.benefits .container .item img {
+  width: 50px;
+  display: inline-block;
 }
 
-.benefits-container .benefit-item h3,
-.benefits-container .benefit-item p {
-  text-align: right;
+.benefits .container .item h3 {
   font-size: 1rem;
-  margin-bottom: 0;
+  width: 70%;
+  padding: 0 0 0 .5rem;
+  display: inline-block;
+  margin-bottom: .5rem;
+  transform: translateY(-7px);
 }
 
-.benefits-container .half>img {
+.benefits .container .item p {
+  font-size: .8rem;
+  text-align: left;
+}
+
+.benefits .container .half>img {
   width: 100%;
   height: 30rem;
   border-radius: 20px;
@@ -731,20 +1040,18 @@ nav ul li img {
 }
 
 .feedback {
-  margin: 3rem auto;
   overflow: clip;
-  padding: 2rem 0;
+  padding: 0 0 1rem;
   position: relative;
+
+  border-radius: 40px;
+  border: 10px solid #eee;
 }
 
 .feedback h2 {
-  font-size: 2rem;
   color: #00234a;
   text-align: center;
   margin-bottom: 3rem;
-
-  animation: fade-in linear both;
-  animation-timeline: view(30% 0%);
 }
 
 .feedback .row {
@@ -771,7 +1078,7 @@ nav ul li img {
   content: "\201D";
   font-size: 20rem;
   position: absolute;
-  top: 19rem;
+  top: 22rem;
   left: 75%;
   transform: translateX(-50%);
   color: #00234a;
@@ -811,14 +1118,9 @@ nav ul li img {
 
 .feedback .row .feedback-item {
   width: 30rem;
-  height: 10rem;
+  height: 13rem;
   padding: 1.5rem;
   position: relative;
-
-  background: linear-gradient(150deg, rgba(255, 255, 255, 0.1), rgba(109, 209, 212, .3));
-  border-radius: 20px;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .feedback-item h3 {
@@ -829,7 +1131,6 @@ nav ul li img {
 
 .feedback-item p {
   font-style: italic;
-
 }
 
 .feedback-item h3 span {
@@ -838,85 +1139,93 @@ nav ul li img {
   display: block;
 }
 
+.faq {
+  width: 62.5rem;
+  margin: 0 auto;
+}
+
+.faq h2 {
+  margin-bottom: 0.5rem;
+}
+
+.faq .container  {
+  margin-top: 2rem;
+}
+
+.faq .container details {
+  margin-bottom: 0.5rem;
+  transition: 0.3s;
+  cursor: help;
+}
+
 .cta {
   width: 62.5rem;
-  height: 20rem;
-  margin: 6rem auto;
-  padding: 1.5rem;
-  border-radius: 20px;
-  background: url("images/anchorage_1000x563.webp");
-  background-size: cover;
-  background-attachment: fixed;
-
-
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  background: linear-gradient(90deg, rgba(0, 35, 74, 0.7), rgba(0, 35, 74, 0)), url("images/wavy-pattern.png"), url("images/hero_1920x1280.webp");
+  background-size: cover, cover, 150%;
+  background-position: center, center, left ;
+  border-radius: 30px;
+  
+  animation: float-up linear both;
+  animation-timeline: view(30% 0%);
 }
 
-.cta h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin: 3rem auto 1rem;
-}
-
-.cta p {
-  text-align: center;
-  width: 45rem;
-  margin: 0 auto 2rem;
+.cta h2, .cta p {
+  color: #fff;
+  width: 40rem;
+  margin: 0.5rem 0;
 }
 
 .cta button {
   width: 20rem;
-  height: 2.5rem;
-  border-radius: 20px;
-  margin: 0 auto;
-  display: block;
-  border: none;
 }
 
 footer {
-  margin: 9rem auto;
   background-color: #00234a;
-  border-radius: 30px 30px 0 0;
-  padding: 3rem 0 0;
+  border-radius: 40px;
+  border: 10px solid #eee;
+  padding: 3rem;
 }
 
-.footer-container {
+footer .container {
   display: flex;
   flex-wrap: wrap;
   width: 62.5rem;
   margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.footer-container .footer-logo {
-  width: 40%;
+footer .container img.logo {
+  width: 20rem;
+  height: auto;
 }
 
-.footer-container .footer-logo img {
-  width: 15rem;
-  margin-top: 1.5rem;
-}
-
-.footer-container .address {
+footer .container .address {
   display: flex;
-  flex: 1;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-.footer-container .address .address-item {
+footer .container .address .item {
   color: #fff;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-.footer-container .address .address-item p {
+footer .container .address .item h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer .container .address .item p {
   text-align: left;
 }
 
-.footer-container > p {
+footer .container > p {
   width: 100%;
   margin: 3rem 0 0;
   text-align: center;
   color: #fff;
   font-size: .8rem;
-  border-top: solid 1px #6dd1d4;
-  padding: 2rem 0;
+  padding: 2rem 0 0;
 }
