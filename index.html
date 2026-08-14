@@ -16,15 +16,25 @@
 
 <body>
     <nav role="navigation">
-        <ul>
+        <img src="images/logo-color_300x68.webp" alt="isc color logo" width="9rem" height="auto" fetchpriority="high">
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-button">
+            <span class="hamburger"></span>
+        </label>
+
+        <ul class="nav-links">
             <li><a href="https://www.internationalshipcare.com"><img src="images/ISC.webp" alt="isc logo"></a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Layup</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Partnership</a></li>
-            <li><a href="#">Feedback</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#benefits">Why Us?</a></li>
+            <li><a href="#process">Layup Process</a></li>
+            <li><a href="#location">Anchorage</a></li>
+            <li><a href="#feedback">Feedback</a></li>
         </ul>
     </nav>
+
+    <a class="button email">
+        Email Us <img src="images/icons/email-b-96.webp" alt="email to isc">
+    </a>
 
     <div class="pin"> <!-- Ini untuk pin the part supaya animate scroll -->
         <section class="hero" role="banner">
@@ -33,15 +43,11 @@
                 operations. Our vast experience spans all vessel types, providing bespoke hot and cold layup solutions
                 tailored to your unique needs. As your partner, we help reduce vessel operating costs while maintaining
                 safety, asset condition, and reactivation readiness.</p>
-
-            <div class="hero-cta">
-                <button>Request A Layup Proposal</button>
-                <button>Call</button>
-            </div>
+            <a class="button hero-cta">Request A Layup Proposal</a>
         </section>
     </div>
 
-    <section class="main-services">
+    <section class="main-services" id="services">
         <h2>Our Main Services</h2>
         <div class="main-service-item float">
             <div class="desc">
@@ -50,7 +56,7 @@
                     proficiency is demonstrated through creating custom layup plans and executing swift vessel
                     reactivation
                     via specialized methods.</p>
-                <button>Explore Vessel Layup Option</button>
+                <a class="button">Explore Vessel Layup Option</a>
             </div>
             <div class="container">
                 <div class="item glass">
@@ -93,7 +99,7 @@
             </div>
             <p>Our marine services company offers offshore marine services and marine ship management, including
                 engineering, logistics, inspections, maintenance, procurement, and vessel management.</p>
-            <button>Explore Marine Services</button>
+            <a class="button">Explore Marine Services</a>
         </div>
         <div class="main-service-item float">
             <h3>Anchorage Service</h3>
@@ -101,41 +107,41 @@
                 anchorage service marvelously executes precise vessel positioning. We expertly master the entire mooring
                 process to guarantee smooth operations, maximum security, and complete asset protection for every vessel
                 in our care.</p>
-            <button>View Anchorage Location</button>
+            <a class="button">View Anchorage Location</a>
         </div>
     </section>
 
-    <section class="benefits">
+    <section class="benefits" id="benefits">
         <h2>Your True-Blue Partner <span>Why Choose International Shipcare</span></h2>
         <div class="container">
             <div class="half">
                 <div class="item">
-                    <img src="images/icons/proven-96.webp" alt="Proven Layup Experience">
+                    <img src="images/icons/proven-96.webp" alt="Proven Layup Experience" width="50" height="50">
                     <h3>Proven Layup Experience</h3>
                     <p>Almost five decades of experience managing vessel layup and reactivation projects.</p>
                 </div>
                 <div class="item">
-                    <img src="images/icons/money-96.webp" alt="Reduced Operating Costs">
+                    <img src="images/icons/money-96.webp" alt="Reduced Operating Costs" width="50" height="50">
                     <h3>Reduced Operating Costs</h3>
                     <p>Tailored layup plans designed to minimise unnecessary crewing, fuel and maintenance costs.</p>
                 </div>
                 <div class="item">
-                    <img src="images/icons/technical-96.webp" alt="Technical Vessel Preservation">
+                    <img src="images/icons/technical-96.webp" alt="Technical Vessel Preservation" width="50" height="50">
                     <h3>Technical Vessel Preservation</h3>
                     <p>Structured preservation procedures for machinery, equipment, deck and accommodation areas.</p>
                 </div>
                 <div class="item">
-                    <img src="images/icons/24-hours-96.webp" alt="24/7 Vessel Monitoring">
+                    <img src="images/icons/24-hours-96.webp" alt="24/7 Vessel Monitoring" width="50" height="50">
                     <h3>24/7 Vessel Monitoring</h3>
                     <p>Continuous communication, watchkeeping and vessel condition monitoring.</p>
                 </div>
                 <div class="item">
-                    <img src="images/icons/report-96.webp" alt="Regular Technical Reporting">
+                    <img src="images/icons/report-96.webp" alt="Regular Technical Reporting" width="50" height="50">
                     <h3>Regular Technical Reporting</h3>
                     <p>Clear weekly updates and detailed monthly reports for vessel owners.</p>
                 </div>
                 <div class="item">
-                    <img src="images/icons/marine-96.webp" alt="Integrated Marine Support">
+                    <img src="images/icons/marine-96.webp" alt="Integrated Marine Support" width="50" height="50">
                     <h3>Integrated Marine Support</h3>
                     <p>Access to logistics, engineering, inspection, procurement and husbandry services.</p>
                 </div>
@@ -158,7 +164,7 @@
         </div>
     </section>
 
-    <section class="process">
+    <section class="process" id="process">
         <h2>Layup Process</h2>
         <div class="container">
             <div class="item">
@@ -208,7 +214,7 @@
         </div>
     </section>
 
-    <section class="location">
+    <section class="location" id="location">
         <div class="container">
             <h2><span>Designated Lay-up Anchorage</span>Brunei Bay, Sabah, Malaysia</h2>
             <p>Our lay-up anchorage in Brunei Bay, Sabah, Malaysia holds the distinction of being the world's first,
@@ -234,7 +240,7 @@
                 and VHF communication with the operation base.</p>
         </div>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback">
         <h2>Clients Feedback</h2>
         <div class="row">
             <div class="feedback-item glass">
@@ -390,7 +396,7 @@
         <h2>Ready to Layup Your Vessel?</h2>
         <p>Share your vessel requirements with our team and receive a tailored recommendation for vessel layup,
             anchorage or integrated marine services.</p>
-        <button>Contact Us</button>
+        <a class="button">Contact Us</a>
     </section>
 
     <footer>
