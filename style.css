@@ -322,7 +322,7 @@ a.button:hover {
 }
 
 .main-services .main-service-item:nth-child(2) {
-  background: linear-gradient(rgba(0, 35, 74, 0.7), rgba(109, 209, 212, 0.5)), url("images/layup2_1000x563.jpg") center;
+  background: linear-gradient(rgba(0, 35, 74, 0.7), rgba(109, 209, 212, 0.5)), url("images/layup2_1000x563.webp") center;
   background-size: cover;
   display: flex;
 }
@@ -830,6 +830,13 @@ a.button:hover {
   width: 20rem;
 }
 
+.cta .form {
+  border-radius: 20px;
+  width: 100%;
+  height: 720px;
+  margin: 2rem 0;
+} 
+
 footer {
   background-color: #00234a;
   border-radius: 40px;
@@ -878,6 +885,9 @@ footer .container>p {
   color: #fff;
   font-size: .8rem;
   padding: 2rem 0 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
 }
 
 @media screen and (max-width: 768px) {
@@ -1261,6 +1271,8 @@ footer .container>p {
     width: calc(100% - 2rem) !important;
     padding: 2rem 1rem !important;
     border-radius: 30px !important;
+    background: url("images/hero_m.webp");
+    background-position: center;
   }
 
   .cta h2,
