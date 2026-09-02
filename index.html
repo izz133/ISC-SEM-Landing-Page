@@ -15,6 +15,17 @@
 </head>
 
 <body>
+
+    <svg style="display: none;">
+        <defs>
+            <filter id="liquid-glass" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox">
+                <feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="2" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="smoothedNoise" scale="50" xChannelSelector="R"
+                    yChannelSelector="G" result="refraction" />
+            </filter>
+        </defs>
+    </svg>
+
     <nav role="navigation">
         <img src="images/logo-color_300x68.webp" alt="isc color logo" width="9rem" height="auto" fetchpriority="high">
         <input type="checkbox" id="menu-toggle" class="menu-checkbox">
@@ -32,21 +43,19 @@
         </ul>
     </nav>
 
-    <a href="https://www.internationalshipcare.com/landing-page-form/" class="button email">
+    <a href="#cta" class="button email">
         Email Us <img src="images/icons/email-b-96.webp" alt="email to isc">
     </a>
 
-    <div class="pin"> <!-- Ini untuk pin the part supaya animate scroll -->
-        <section class="hero" role="banner">
-            <h1><span>Professional Vessel Layup Services in Malaysia</span>INTERNATIONAL SHIPCARE</h1>
-            <p>Established in 1975, we are trusted Marine Layup Professionals delivering superior maritime layup
-                operations. Our vast experience spans all vessel types, providing bespoke hot and cold layup solutions
-                tailored to your unique needs. As your partner, we help reduce vessel operating costs while maintaining
-                safety, asset condition, and reactivation readiness.</p>
-            <a href="https://www.internationalshipcare.com/landing-page-form/" class="button hero-cta">Request A Layup
-                Proposal</a>
-        </section>
-    </div>
+    <section class="hero" role="banner">
+        <h1><span>Professional Vessel Layup Services in Malaysia</span>INTERNATIONAL SHIPCARE</h1>
+        <p>Established in 1975, we are trusted Marine Layup Professionals delivering superior maritime layup
+            operations. Our vast experience spans all vessel types, providing bespoke hot and cold layup solutions
+            tailored to your unique needs. As your partner, we help reduce vessel operating costs while maintaining
+            safety, asset condition, and reactivation readiness.</p>
+        <a href="#cta" class="button hero-cta">Request A Layup
+            Proposal</a>
+    </section>
 
     <section class="main-services" id="services">
         <h2>Our Main Services</h2>
@@ -397,7 +406,7 @@
     </section>
 
 
-    <section class="cta float">
+    <section class="cta float" id="cta">
         <h2>Ready to Layup Your Vessel?</h2>
         <p>Share your vessel requirements with our team and receive a tailored recommendation for vessel layup,
             anchorage or integrated marine services.</p>
@@ -441,6 +450,22 @@
             <p>&copy; 2026 International Shipcare Pte. Ltd. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // copy paste row supaya infinite scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const rows = document.querySelectorAll('.feedback .row');
+
+            rows.forEach((row) => {
+                const items = Array.from(row.children);
+                items.forEach((item) => {
+                    const clone = item.cloneNode(true);
+                    clone.setAttribute('aria-hidden', 'true');
+                    row.appendChild(clone);
+                });
+            });
+        });
+    </script>
 
 
 </body>
