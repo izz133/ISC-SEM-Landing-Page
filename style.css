@@ -22,7 +22,6 @@
     inset 0 0.7px 0.7px rgba(var(--color-white-rgb), 0.5);
   --shadow-md: 0 5px 10px rgba(var(--color-black-rgb), 0.2),
     inset 0 1px 1px rgba(var(--color-white-rgb), 0.5);
-
   --gpu-layer: translateZ(0);
 }
 
@@ -38,8 +37,9 @@ body {
   height: 100%;
   background-color: var(--color-bg);
   /* Syntax: scrollbar-color: [thumb color] [track color] */
-  scrollbar-color: var(--color-primary) var(--color-bg); 
-  scrollbar-width: auto; /* Options: auto | thin | none */
+  scrollbar-color: var(--color-primary) var(--color-bg);
+  scrollbar-width: auto;
+  /* Options: auto | thin | none */
   scrollbar-gutter: auto;
 }
 
@@ -164,7 +164,7 @@ nav ul li img {
 #location,
 #feedback,
 #cta {
-  scroll-margin-top: 120px; 
+  scroll-margin-top: 120px;
 }
 
 .menu-checkbox {
@@ -779,6 +779,7 @@ a.button:hover {
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     transform: translate3d(-50%, 0, 0);
   }
@@ -788,6 +789,7 @@ a.button:hover {
   0% {
     transform: translate3d(-50%, 0, 0);
   }
+
   100% {
     transform: translate3d(0, 0, 0);
   }
@@ -804,6 +806,7 @@ a.button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: var(--shadow-blue);
 }
 
 .feedback-item p {

@@ -34,7 +34,7 @@
         </label>
 
         <ul class="nav-links">
-            <li><a href="https://www.internationalshipcare.com"><img src="images/ISC.webp" alt="isc logo"></a></li>
+            <li><a href="#hero"><img src="images/ISC.webp" alt="isc logo"></a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#benefits">Why Us?</a></li>
             <li><a href="#process">Layup Process</a></li>
@@ -47,7 +47,7 @@
         Email Us <img src="images/icons/email-b-96.webp" alt="email to isc">
     </a>
 
-    <section class="hero" role="banner">
+    <section class="hero" id="hero" role="banner">
         <h1><span>Professional Vessel Layup Services in Malaysia</span>INTERNATIONAL SHIPCARE</h1>
         <p>Established in 1975, we are trusted Marine Layup Professionals delivering superior maritime layup
             operations. Our vast experience spans all vessel types, providing bespoke hot and cold layup solutions
@@ -66,7 +66,7 @@
                     proficiency is demonstrated through creating custom layup plans and executing swift vessel
                     reactivation
                     via specialized methods.</p>
-                <a href="https://www.internationalshipcare.com/vessel-layup-services/" class="button">Explore Vessel
+                <a href="#cta" class="button">Explore Vessel
                     Layup Option</a>
             </div>
             <div class="container">
@@ -110,7 +110,7 @@
             </div>
             <p>Our marine services company offers offshore marine services and marine ship management, including
                 engineering, logistics, inspections, maintenance, procurement, and vessel management.</p>
-            <a href="https://www.internationalshipcare.com/other-services/" class="button">Explore Marine Services</a>
+            <a href="#cta" class="button">Explore Marine Services</a>
         </div>
         <div class="main-service-item float">
             <h3>Anchorage Service</h3>
@@ -118,7 +118,7 @@
                 anchorage service marvelously executes precise vessel positioning. We expertly master the entire mooring
                 process to guarantee smooth operations, maximum security, and complete asset protection for every vessel
                 in our care.</p>
-            <a href="https://www.internationalshipcare.com/other-services/anchorage-services/" class="button">View
+            <a href="#cta" class="button">View
                 Anchorage Location</a>
         </div>
     </section>
@@ -464,6 +464,12 @@
                     row.appendChild(clone);
                 });
             });
+        });
+
+        window.addEventListener('message', function (event) {
+            if (event.data && event.data.type === 'wpforms_redirect') {
+                window.location.href = event.data.url;
+            }
         });
     </script>
 
