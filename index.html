@@ -1,7 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="is-safari">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5SXH3W4');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -15,16 +25,23 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SXH3W4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <svg style="display: none;">
         <defs>
-            <filter id="liquid-glass" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox">
+            <filter id="liquid-glass" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox"
+                color-interpolation-filters="sRGB">
                 <feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="2" result="noise" />
                 <feDisplacementMap in="SourceGraphic" in2="smoothedNoise" scale="50" xChannelSelector="R"
                     yChannelSelector="G" result="refraction" />
             </filter>
         </defs>
     </svg>
+
+
 
     <nav role="navigation">
         <img src="images/logo-color_300x68.webp" alt="isc color logo" width="9rem" height="auto" fetchpriority="high">
@@ -257,29 +274,38 @@
         <h2>Clients Feedback</h2>
         <div class="row">
             <div class="feedback-item glass">
-                <p>"Very easy. Very satisfied."</p>
-                <h3>Fabian Sim <span>Operation Manager ShearWater</span></h3>
+                <p>"This message unlike other messages going through past 2 weeks is not about any query or quotation.
+                    It is simply as message of gratitude to your team being relentless in supporting our daily
+                    activities on ad hoc basis.</p>
+                <h3>Rahul Joshi <span>MOL GSM</span></h3>
             </div>
-            <div class="feedback-item glass">
-                <p>"Thank you for completing the confined space entry work onboard Hurra. We
-                    appreciate the professionalism and adherence to safety protocols demonstrated by your team
-                    throughout the task"</p>
-                <h3>Ram <span>BW Offshore</span></h3>
+           <div class="feedback-item glass">
+                <p>"Overall visit was properly arranged and safe"</p>
+                <h3>Nizam Ahmad <span>Project Engineer MISC</span></h3>
             </div>
             <div class="feedback-item glass">
                 <p>"All support is extremely well organised ontime & Excellent knowledge of Nganhurra FPSO"</p>
                 <h3>Jakob <span>Closure lead Woodside Energy</span></h3>
             </div>
+
             <div class="feedback-item glass">
-                <p>"Our two vessels have been well managed"</p>
-                <h3>Changyoul Lee <span>SK Shipping</span></h3>
+                <p>"Very accomodate to our requests and Excellent preparations. Thank you to ISC Team for the excellence
+                    support."</p>
+                <h3>Jim Petiti <span>Fleet Superintendent Woodside Energy</span></h3>
             </div>
+            
             <div class="feedback-item glass">
                 <p>"Good arrangement from Kairulanuar(Technical Superintendent)"</p>
                 <h3>Deedaf <span>MES Asia MOL LNG</span></h3>
             </div>
         </div>
         <div class="row">
+             <div class="feedback-item glass">
+                <p>"Thank you for completing the confined space entry work onboard Hurra. We
+                    appreciate the professionalism and adherence to safety protocols demonstrated by your team
+                    throughout the task"</p>
+                <h3>Ram <span>BW Offshore</span></h3>
+            </div>
             <div class="feedback-item glass">
                 <p>"Well planned on with ontime responds"</p>
                 <h3>Praveen Kumar <span>Sr Tech Superintendent Nissen Kaiun</span></h3>
@@ -295,14 +321,10 @@
                 <h3>Capt M Zaid Mustapa <span>Marine Superintendent MISC</span></h3>
             </div>
             <div class="feedback-item glass">
-                <p>"Very accomodate to our requests and Excellent preparations. Thank you to ISC Team for the excellence
-                    support."</p>
-                <h3>Jim Petiti <span>Fleet Superintendent Woodside Energy</span></h3>
+                <p>"Our two vessels have been well managed"</p>
+                <h3>Changyoul Lee <span>SK Shipping</span></h3>
             </div>
-            <div class="feedback-item glass">
-                <p>"Overall visit was properly arranged and safe"</p>
-                <h3>Nizam Ahmad <span>Project Engineer MISC</span></h3>
-            </div>
+            
         </div>
     </section>
 
@@ -471,6 +493,7 @@
                 window.location.href = event.data.url;
             }
         });
+
     </script>
 
 
